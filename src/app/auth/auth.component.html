@@ -1,0 +1,21 @@
+<!-- auth.component.html -->
+
+<div class="auth-container">
+    <form [formGroup]="authForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" formControlName="username">
+      </div>
+  
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" formControlName="password">
+      </div>
+  
+      <div class="button-group">
+        <button type="submit" [disabled]="authForm.invalid">Login</button>
+        <button type="button" (click)="signup()" [disabled]="authForm.invalid">Signup</button>
+      </div>
+    </form>
+  </div>
+  

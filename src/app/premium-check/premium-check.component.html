@@ -1,0 +1,12 @@
+<!-- premium-check.component.html -->
+<h2>Premium Check</h2>
+<p>Current Market Value: {{ currentMarketValue | currency }}</p>
+
+<div class="button-container">
+  <button mat-raised-button color="primary" (click)="calculatePremium(1)">1 Year</button>
+  <button mat-raised-button color="primary" (click)="calculatePremium(2)">2 Years</button>
+  <button mat-raised-button color="primary" (click)="calculatePremium(3)">3 Years</button>
+  <button mat-raised-button color="primary" (click)="calculatePremium(4)">4 Years</button>
+</div>
+
+<p *ngIf="premiumAmount !== undefined">Premium Amount: {{ premiumAmount | currency }}</p>

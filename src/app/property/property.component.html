@@ -1,0 +1,52 @@
+<div class="container">
+
+ <form [formGroup] ="extForm" (ngSubmit)="onSubmit()">
+
+    <label for="cmv">currentMarketValue:</label>
+    <input type="text" id="cmv" class="example-full-width"  formControlName="currentMarketValue">
+
+    <label for="sqft" >carpetArea/sq.ft:</label>
+    <input type="text" id="sqft" class="example-full-width" formControlName="carpetArea">
+
+    <label for="pincode">pincode:</label>
+    <input type="text" id="pincode" class="example-full-width" formControlName="pincode">
+
+    <div>
+      <label>Age of Building:</label>
+      <div class="radio-group">
+        <label>
+          <input type="radio" value="0-5" formControlName="ageOfBuilding"> 0-5 years
+        </label>
+        <label>
+          <input type="radio" value="6-10" formControlName="ageOfBuilding"> 6-10 years
+        </label>
+        <label>
+          <input type="radio" value="11-20" formControlName="ageOfBuilding"> 11-20 years
+        </label>
+        <label>
+          <input type="radio" value="21+" formControlName="ageOfBuilding"> 21+ years
+        </label>
+      </div>
+      
+    </div>
+
+    <label >Has your property effected with floods in past 5years:</label>
+    <mat-slide-toggle formControlName="flood">yes to slide </mat-slide-toggle>
+
+    
+    <label >Has your property effected with earthQuake in past 5years:</label>
+    <mat-slide-toggle formControlName="earthQuake">yes to slide</mat-slide-toggle>
+
+    <label >Has 24*7 security:</label>
+    <mat-slide-toggle formControlName="security">yes to slide</mat-slide-toggle>
+
+    <label > Are you employed :</label>
+    <mat-slide-toggle formControlName="salaried">yes to slide</mat-slide-toggle>
+
+
+
+
+    <button [disabled]="extForm.invalid"type="submit">Submit</button>
+
+ </form>
+</div>

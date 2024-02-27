@@ -1,0 +1,21 @@
+/* premium-dialog.component.css */
+:host {
+    display: block;
+    width: 300px; /* Adjust the width as needed */
+  }
+  
+  h2 {
+    color: #2196F3; /* Material blue color, adjust as needed */
+  }
+  
+  p {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  button {
+    margin-top: 20px;
+    background-color: #2196F3;
+    color: white;
+  }
+  
